@@ -10,6 +10,13 @@ body{
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
 nav{
     background-color: $primary-color;
     width: 100%;
