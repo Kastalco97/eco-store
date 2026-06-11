@@ -265,6 +265,51 @@ nav{
     }
 }
 
+.about-us{
+    width: 100%;
+    padding: 48px 24px;
+    @include flexbox($direction:column, $gap:16px);
+
+    .mission_section{
+        @include flexbox($gap:16px);
+        .mission_section_container{
+            width: 50%;
+            @include flexbox($direction:row, $justify: center, $align:center, $gap:12px);
+            font-weight: 500;
+            color: #E86424;
+
+            img{
+                width: 100px;
+            }
+        }
+    }
+}
+
+.gallery{
+    width: 100%;
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);*/
+
+    .gallery__images_container{
+
+        @include flexbox($direction:row, $gap:16px);
+
+        .gallery__images{
+        @include flexbox($justify:center, $align:center);
+        width: 33%;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        }
+    }
+}
 
 .footer{
     width: 100%;

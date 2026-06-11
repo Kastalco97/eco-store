@@ -239,6 +239,66 @@ nav .nav__wrapper .nav_right_container {
   color: white;
 }
 
+.about-us {
+  width: 100%;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+}
+.about-us .mission_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+}
+.about-us .mission_section .mission_section_container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #E86424;
+}
+.about-us .mission_section .mission_section_container img {
+  width: 100px;
+}
+
+.gallery {
+  width: 100%;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);*/
+}
+.gallery .gallery__images_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+}
+.gallery .gallery__images_container .gallery__images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 33%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gallery .gallery__images_container .gallery__images img {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .footer {
   width: 100%;
   height: 250px;
