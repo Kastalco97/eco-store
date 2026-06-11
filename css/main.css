@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #FFEFE7;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -112,19 +111,20 @@ a {
 }
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 32px;
+  background-color: #FFEFE7;
 }
 nav .nav__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   height: 60px;
-  background-color: #FFEFE7;
 }
 nav .nav__wrapper p {
   font-size: 1.5em;
@@ -145,7 +145,7 @@ nav .nav__wrapper .nav_right_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
+  max-width: 900px;
 }
 
 .hero__section {
@@ -175,6 +175,48 @@ nav .nav__wrapper .nav_right_container {
 .hero__section img {
   height: 70vh;
   border-radius: 20px;
+}
+
+.product-section {
+  width: 100%;
+}
+.product-section .healthcare {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-section .healthcare h2 {
+  font-size: 1.5rem;
+}
+.product-section .healthcare .card_section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+.product-section .healthcare .product_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 12px;
+  background-color: #FFDAC6;
+  border-radius: 8px;
+}
+.product-section .healthcare .product_card button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.product-section .healthcare .product_card .product__image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.product-section .healthcare .product_card .product__image img {
+  width: 100%;
 }
 
 .footer {

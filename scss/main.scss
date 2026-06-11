@@ -5,13 +5,12 @@ $primary-text-color: #7C6A0A;
 $accent-color: #FA9500;
 $font-stack: "IBM Plex Sans", sans-serif;
 $paragraph-font-size: 1rem;
-$max-width-layout: 1200px;
+$max-width-layout: 900px;
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: $primary-color;
     font-family: $font-stack;
 }
 
@@ -125,11 +124,21 @@ a{
             width: 48px;
         }
 
+@mixin flexbox ($direction, $justify, $align, $gap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap:$gap;
+}
+
 nav{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 32px;
+    background-color: $primary-color;
     
 
     .nav__wrapper{
@@ -139,7 +148,6 @@ nav{
         width: 100%;
         max-width: $max-width-layout;
         height: 60px;
-        background-color: $primary-color;
 
     p{
         font-size: 1.5em;
@@ -202,6 +210,57 @@ nav{
         }
     
 }
+
+.product-section{
+    width: 100%;
+
+    .healthcare{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h2{
+            font-size: 1.5rem;
+        }
+
+        .card_section{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .product_card{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+            gap: 12px;
+            background-color: $secondary-color;
+            border-radius: 8px;
+
+            button{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .product__image{
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+                border-radius: 8px;
+                
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 
 .footer{
     width: 100%;
