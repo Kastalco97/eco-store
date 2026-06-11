@@ -203,6 +203,13 @@ nav{
     
 }
 
+.card_section{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
 .product-section{
     width: 100%;
 
@@ -214,13 +221,6 @@ nav{
 
         h2{
             font-size: 1.5rem;
-        }
-
-        .card_section{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 32px;
         }
 
         .product_card{
@@ -247,8 +247,20 @@ nav{
 
                 img{
                     width: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
                 }
             }
+        }
+    }
+
+    .furniture{
+        @extend .healthcare;
+        
+        .product_card{
+            background-color: $tertiary-color;
+            color: white;
         }
     }
 }

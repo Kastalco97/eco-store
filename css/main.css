@@ -189,25 +189,26 @@ nav .nav__wrapper .nav_right_container {
   border-radius: 20px;
 }
 
-.product-section {
-  width: 100%;
-}
-.product-section .healthcare {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.product-section .healthcare h2 {
-  font-size: 1.5rem;
-}
-.product-section .healthcare .card_section {
+.card_section {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 32px;
 }
-.product-section .healthcare .product_card {
+
+.product-section {
+  width: 100%;
+}
+.product-section .healthcare, .product-section .furniture {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-section .healthcare h2, .product-section .furniture h2 {
+  font-size: 1.5rem;
+}
+.product-section .healthcare .product_card, .product-section .furniture .product_card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -216,19 +217,26 @@ nav .nav__wrapper .nav_right_container {
   background-color: #FFDAC6;
   border-radius: 8px;
 }
-.product-section .healthcare .product_card button {
+.product-section .healthcare .product_card button, .product-section .furniture .product_card button {
   position: absolute;
   top: 0;
   right: 0;
 }
-.product-section .healthcare .product_card .product__image {
+.product-section .healthcare .product_card .product__image, .product-section .furniture .product_card .product__image {
   width: 100%;
   height: 250px;
   overflow: hidden;
   border-radius: 8px;
 }
-.product-section .healthcare .product_card .product__image img {
+.product-section .healthcare .product_card .product__image img, .product-section .furniture .product_card .product__image img {
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product-section .furniture .product_card {
+  background-color: #BABD8D;
+  color: white;
 }
 
 .footer {
