@@ -2,12 +2,21 @@ $primary-color: #FFEFE7;
 $secondary-color: #FFDAC6;
 $tertiary-color: #BABD8D;
 $primary-text-color: #7C6A0A;
+$accent-color: #FA9500;
 $font-stack: "IBM Plex Sans", sans-serif;
+$paragraph-font-size: 1rem;
+$max-width-layout: 1200px;
 
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $primary-color;
+    font-family: $font-stack;
+}
+
+body{
+    color: $primary-text-color;
 }
 
 li{
@@ -17,18 +26,181 @@ li{
 a{
     text-decoration: none;
 }
+
+.button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            border-radius: 1000px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /*Button hierarchy*/
+
+        /*----Primary----*/
+        .button--primary{
+            color: $primary-color;
+            background-color: $accent-color;     
+            transition: background-color .3s ease;       
+        }
+
+        .button--primary:hover{
+            background-color: #e68a00;            
+        }
+
+        .button--primary:active{
+            background-color: #cc7a00;            
+        }
+
+        /*----Secondary----*/
+        .button--secondary{
+            color: $primary-text-color;
+            background-color: $primary-color;
+            border: 1px solid $tertiary-color;    
+            transition: background-color .3s ease;       
+        }
+
+        .button--secondary:hover{
+            background-color: $secondary-color;            
+        }
+
+        .button--secondary:active{
+            background-color: #ebc6b3;            
+        }
+
+        /*----Tertiary----*/
+        .button--tertiary{
+            color: $primary-text-color;
+            background-color: transparent;  
+            transition: background-color .3s ease;       
+        }
+
+        .button--tertiary:hover{
+            background-color: #e68a0020;            
+        }
+
+        .button--tertiary:active{
+            background-color: #e68a0030;            
+        }
+
+
+        /*Button sizes*/
+
+        .button-sm{
+            height: 32px;
+            padding: 0 8px;
+            gap: 4px;
+        }
+
+        .button-md{
+            height: 40px;
+            padding: 0 12px;
+            gap: 8px;
+        }
+
+        .button-lg{
+            height: 40px;
+            padding: 0 16px;
+            gap: 8px;
+        }
+
+
+
+        /*Button icon styles*/
+        .button--icon--sm{
+            height: 32px;
+            width: 32px;
+        }
+
+        .button--icon--md{
+            height: 40px;
+            width: 40px;
+        }
+
+        .button--icon--lg{
+            height: 48px;
+            width: 48px;
+        }
+
 nav{
-    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+    
+
+    .nav__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: $max-width-layout;
+        height: 60px;
+        background-color: $primary-color;
+
+    p{
+        font-size: 1.5em;
+    }
+
+    .nav_right_container{
+        display: flex;
+        gap: 4px;
+
+    }
+
+    }
+}
+
+.main__section{
     width: 100%;
-    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: $primary-color;
+
+    .main__section_wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: $max-width-layout;
+    }
 
 }
 
-main{
-    background-color: $primary-color;
+.hero__section{
     width: 100%;
-    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
 
+    .impact__section{
+        width: clamp(350px, 100%, 600px);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        h1{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: $paragraph-font-size;
+        }
+
+        .button{
+            width: fit-content;
+            min-width: 150px;
+        }
+    }
+        img{
+            height: 70vh;
+            border-radius: 20px;
+        }
+    
 }
 
 .footer{
