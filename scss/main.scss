@@ -124,7 +124,7 @@ a{
             width: 48px;
         }
 
-@mixin flexbox ($direction, $justify, $align, $gap){
+@mixin flexbox ($justify:start, $align:start, $direction:row, $gap:0){
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -134,17 +134,13 @@ a{
 
 nav{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(center, center);
     padding: 0 32px;
     background-color: $primary-color;
     
 
     .nav__wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox(space-between, center);
         width: 100%;
         max-width: $max-width-layout;
         height: 60px;
@@ -154,7 +150,7 @@ nav{
     }
 
     .nav_right_container{
-        display: flex;
+        @include flexbox();
         gap: 4px;
 
     }
@@ -180,16 +176,12 @@ nav{
 
 .hero__section{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox($justify:space-between,$align:center);
     gap: 48px;
 
     .impact__section{
         width: clamp(350px, 100%, 600px);
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+        @include flexbox($direction:column, $gap:16px);
 
         h1{
             font-size: 2rem;

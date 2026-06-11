@@ -113,15 +113,19 @@ a {
 nav {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
   padding: 0 32px;
   background-color: #FFEFE7;
 }
 nav .nav__wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
   width: 100%;
   max-width: 900px;
   height: 60px;
@@ -131,6 +135,10 @@ nav .nav__wrapper p {
 }
 nav .nav__wrapper .nav_right_container {
   display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
   gap: 4px;
 }
 
@@ -151,14 +159,18 @@ nav .nav__wrapper .nav_right_container {
 .hero__section {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
   gap: 48px;
 }
 .hero__section .impact__section {
   width: clamp(350px, 100%, 600px);
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: start;
   gap: 16px;
 }
 .hero__section .impact__section h1 {
