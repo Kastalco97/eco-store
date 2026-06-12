@@ -287,15 +287,16 @@ nav{
 
 .gallery{
     width: 100%;
+    padding: 32px 24px;
     /*display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);*/
 
     .gallery__images_container{
 
-        @include flexbox($direction:row, $gap:16px);
+        @include flexbox($gap:16px);
 
         .gallery__images{
-        @include flexbox($justify:center, $align:center);
+        @include flexbox($gap:16px);
         width: 33%;
         height: 200px;
         border-radius: 8px;
@@ -311,9 +312,60 @@ nav{
     }
 }
 
+.location{
+    width: 100%;
+    max-width: $max-width-layout;
+    padding: 32px 24px;
+    @include flexbox($direction:column, $gap:16px);
+    
+    .map{
+        width: 100%;
+        @include flexbox($justify:center,$align: center);
+        border-radius: 12px;
+
+        img{
+            width: 100%;
+        }        
+    
+    }
+
+    .address__container{
+
+                @include flexbox($direction: column);
+
+                p{
+                    font-size: 0.875;
+                    color: #cc7a00;
+            }
+        }
+
+}
 .footer{
+     $background-color: #FA9500;
+
+    @include flexbox($direction: column, $gap:16px);
     width: 100%;
     height: 250px;
-    $background: #FA9500;
-    background-color: $background;
+    padding: 20px;
+    background: $background-color;
+    color: white;
+
+    .footer__list{
+        @include flexbox($direction: column, $gap:8px);
+        
+        .footer__list__item_link{
+            font-size: 0.875rem;
+            color: white;
+        }
+    }
+        
+
+        .social__media{
+            width: 100%;
+            @include flexbox($justify: center, $align: center, $gap:16px);
+
+            img{
+                width: 32px;
+            }
+        }
 }
